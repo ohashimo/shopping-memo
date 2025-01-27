@@ -1,0 +1,266 @@
+body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFEDB3;
+  color: #4e454a;
+  text-align: center;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  margin: 5px;
+}
+
+.menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: black;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.menu.open {
+  left: 0;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #efefef4d;
+  color: black;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.edit-input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.content {
+  margin-top: 60px;
+  /* ヘッダーの高さを考慮 */
+}
+
+.container {
+  animation: fadeIn 0.5s ease;
+}
+
+.link-button {
+  background-color: #ead0b3;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categoryLink {
+  width: 400px;
+  background-color: #ead0b3;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-container input {
+  flex-grow: 1;
+}
+
+.button-container button {
+  flex-shrink: 0;
+}
+
+.large-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.large-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #007bff;
+  /* チェックマークの色を変更 */
+}
+
+/* チェックボックスのスタイル */
+.checkbox {
+  width: 20px;
+  /* チェックボックスの幅 */
+  height: 20px;
+  /* チェックボックスの高さ */
+  transform: scale(1.2);
+  /* サイズを1.5倍に */
+  margin-right: 10px;
+  /* チェックボックスとテキストの間隔 */
+}
+
+/*BackButton--------------------------------------*/
+/* src/components/BackButton.css */
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #ead0b3;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/*CalenderPage------------------------------*/
+.calendar-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.memo-section {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.memo-section h2 {
+  margin-bottom: 10px;
+}
+
+.memo-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.memo-section li {
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.memo-section input {
+  width: calc(100% - 90px);
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.memo-section button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*nav-button------------------------------*/
+
+.nav-buttons {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.nav-button {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ead0b3;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
