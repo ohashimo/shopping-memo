@@ -3,20 +3,20 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react
 import CategoryList from './CategoryList';
 import MemoPage from './MemoPage';
 import EditCategory from './EditCategory';
-import BackButton from './BackButton'; // 戻るボタンをインポート
+import BackButton from './BackButton';
 import categoriesData from '../data/categories';
 import '../style.css';
 import './Button.css';
 import CalendarPage from '../components/CalendarPage';
 
 function App() {
-  // 初期データをローカルストレージから取得
+  // ローカルストレージから取得
   const [categories, setCategories] = useState(() => {
     const savedCategories = localStorage.getItem('categories');
     return savedCategories ? JSON.parse(savedCategories) : categoriesData;
   });
 
-  // categoriesが変更されたらローカルストレージに保存
+  // ローカルストレージに保存
   useEffect(() => {
     localStorage.setItem('categories', JSON.stringify(categories));
   }, [categories]);
@@ -26,7 +26,7 @@ function App() {
       <div>
         <h1>MEMO</h1>
 
-        {/* 戻るボタンを常にレンダリングし、ルートごとに表示を制御 */}
+        {/* 戻るボタンの制御 */}
         <BackButton />
         <div>
           <nav className="nav-buttons">

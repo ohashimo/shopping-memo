@@ -81,26 +81,28 @@ function MemoPage({ categories, setCategories }) {
               onChange={() => toggleSelectMemo(memo.id)}
             />
             {memo.text}
-            <button onClick={() => toggleMemoCheck(memo.id)}>完了</button>
+            <button onClick={() => toggleMemoCheck(memo.id)}>済</button>
           </li>
         ))}
       </ul>
 
-      <h2>完了</h2>
-      <ul>
-        {memos.filter((memo) => memo.checked).map((memo) => (
-          <li key={memo.id}>
-            <input
-              type="checkbox"
-              className="checkbox"
-              checked={selectedMemos.includes(memo.id)}
-              onChange={() => toggleSelectMemo(memo.id)}
-            />
-            {memo.text}
-            <button onClick={() => toggleMemoCheck(memo.id)}>未完了</button>
-          </li>
-        ))}
-      </ul>
+      <div className='memo-completion'>
+        <h2>済み</h2>
+        <ul>
+          {memos.filter((memo) => memo.checked).map((memo) => (
+            <li key={memo.id}>
+              <input
+                type="checkbox"
+                className="checkbox"
+                checked={selectedMemos.includes(memo.id)}
+                onChange={() => toggleSelectMemo(memo.id)}
+              />
+              {memo.text}
+              <button onClick={() => toggleMemoCheck(memo.id)}>戻す</button>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <input
         type="text"

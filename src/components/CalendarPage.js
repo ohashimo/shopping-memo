@@ -24,8 +24,9 @@ function CalendarPage() {
     setDate(selectedDate);
   };
 
+  // 空白メモの追加を防止
   const addMemo = (memo) => {
-    if (memo.trim() === '') return; // 空白メモの追加を防止
+    if (memo.trim() === '') return;
     const dateString = date.toDateString();
     const updatedMemos = {
       ...memos,

@@ -60,7 +60,7 @@ function CategoryList({ categories, setCategories }) {
           type="text"
           value={newCategory}
           onChange={(e) => setNewCategory(e.target.value)}
-          placeholder="新しいカテゴリ名を入力"
+          placeholder="カテゴリ名を入力"
         />
         <button onClick={addCategory} className="link-button">
           <FaPlus /> 追加
